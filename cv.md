@@ -1,21 +1,20 @@
 # Elizaveta Belyak
 ## Контакты
-- Email: example@gmail.com  
+- Email: elizavettabelyak@gmail.com  
 - GitHub: https://github.com/elizaveta-belyak
 ## О себе
-Я начинающий frontend-разработчик. Сейчас изучаю HTML, CSS и JavaScript.
+Моя цель — вырасти в крепкого специалиста, способного решать сложные задачи и создавать качественные продукты. Люблю учиться новому, не боюсь трудностей. Нацелена на постоянное развитие навыков и участие в интересных проектах.»
 ## Навыки
-- HTML
-- CSS
-- JavaScript
-- Git
+- Adobe illustrator
+- Adobe photoshop
 - Figma
 ## Пример кода
 ```javascript
-Function hello () {consol.log("Hello?");}
+function hello() {console.log("Hello?");}
+```
 ## Образование
 - Среднее общее образование
 - Самостоятельное обучение frontend разработке
 ## Языки
-- Русский родной
-- Английский базовый
+- Русский (родной)
+- Английский (базовый)
