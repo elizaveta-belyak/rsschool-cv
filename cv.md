@@ -1,20 +1,23 @@
 # Elizaveta Belyak
-## Контакты
+## Contacts:
 - Email: elizavettabelyak@gmail.com  
-- GitHub: https://github.com/elizaveta-belyak
-## О себе
-Моя цель — вырасти в крепкого специалиста, способного решать сложные задачи и создавать качественные продукты. Люблю учиться новому, не боюсь трудностей. Нацелена на постоянное развитие навыков и участие в интересных проектах.»
-## Навыки
+- GitHub: [elizaveta-belyak] (https://github.com/elizaveta-belyak)
+## About me:
+My goal is to become a skilled professional capable of solving complex problems and creating high-quality products. I love learning new things and am not afraid of challenges. I am committed to continuously developing my skills and participating in interesting projects.
+## Skills:
+- HTML
+- CSS
+- JavaScript
 - Adobe illustrator
 - Adobe photoshop
 - Figma
-## Пример кода
+## Code Example:
 ```javascript
 function hello() {console.log("Hello?");}
 ```
-## Образование
-- Среднее общее образование
-- Самостоятельное обучение frontend разработке
-## Языки
-- Русский (родной)
-- Английский (базовый)
+## Education:
+- Secondary General Education
+- Self-paced Frontend Development studies (RS School)
+## Languages:
+- Russian (native)
+- English (elementary)
