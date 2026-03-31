@@ -27,3 +27,22 @@ h1 {
   color: #f5740a;
   font-style: italic;
 }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f5740a;
+}
