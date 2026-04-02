@@ -153,24 +153,24 @@
   height: 524px;
   background-color: #FF4646;
   background-image: 
-    url('assets/img/hero-lights.png'),
+    url('assets/img/hero-lights.png'), 
     url('assets/img/hero-ball-text.png');
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain; 
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .hero__content {
-  width: 426px;
+  width: 100%;
+  max-width: 426px;
   height: 404px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   padding: 60px 0;
   box-sizing: border-box;
 }
@@ -189,6 +189,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  max-width: 426px; 
 }
 
 .hero__caption {
