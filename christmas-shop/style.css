@@ -158,51 +158,73 @@ body {
 
 /* ABOUT */
 .about {
-  padding: 60px 0;
-  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 648px;
+  background-color: #FF4646;
+  background-image: url('assets/images/about-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about__inner {
+.about__white-card {
+  width: 1276px;
+  height: 528px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
+  overflow: hidden;
 }
 
 .about__content {
-  flex: 0 1 630px;
+  width: 426px;
+  height: 328px;
+  margin: auto 0 auto 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__caption {
   font-family: 'Allura', cursive;
   font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.05em;
   color: #FF4646;
-  margin-bottom: 8px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .about__title {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  line-height: 1.52;
+  letter-spacing: 0.16em;
+  color: #181C29;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .about__text {
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.48;
+  letter-spacing: 0;
+  color: #181C29;
+  margin-bottom: 60px;
 }
 
 .about__image {
-  flex: 0 1 630px;
+  width: 638px;
+  height: 528px;
+  margin-left: auto;
 }
 
 .about__image img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* АДАПТИВ */
@@ -258,12 +280,53 @@ body {
   .menu-toggle:hover span::after { transform: rotate(-45deg); top: 0; }
 }
 
-  .about__inner {
+/* АДАПТИВ ABOUT w768 */
+@media (max-width: 768px) {
+  .about {
+    height: 648px;
+  }
+  
+  .about__white-card {
+    width: 752px;
+    height: 528px;
+  }
+
+  .about__content {
+    width: 256px;
+    height: 436px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .about__image {
+    width: 376px;
+    height: 528px;
+  }
+}
+
+/* АДАПТИВ ABOUT w380 */
+@media (max-width: 380px) {
+  .about {
+    min-height: 1000px;
+  }
+
+  .about__white-card {
+    width: 364px;
+    height: 880px;
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
+  }
+
+  .about__content {
+    width: 324px;
+    height: 352px;
+    margin: 0;
     text-align: center;
   }
 
-  .about__content, .about__image {
-    flex: 1 1 100%;
+  .about__image {
+    width: 364px;
+    height: 528px;
+    margin-left: 0;
   }
+}
