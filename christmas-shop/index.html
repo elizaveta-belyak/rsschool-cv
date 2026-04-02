@@ -76,25 +76,5 @@
       </div>
     </section>
   </main>
-  <script>
-  const navOpen = document.getElementById('nav-open');
-  const navClose = document.getElementById('nav-close');
-  const navMobile = document.getElementById('nav-mobile');
-
-  navOpen.addEventListener('click', () => {
-    navMobile.classList.add('active');
-  });
-
-  navClose.addEventListener('click', () => {
-    navMobile.classList.remove('active');
-  });
-
-  const navLinks = document.querySelectorAll('.nav-mobile__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMobile.classList.remove('active');
-    });
-  });
-</script>
 </body>
 </html>
