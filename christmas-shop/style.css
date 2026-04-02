@@ -191,7 +191,8 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  width: 100%;
+  width: 426px;
+  max-width: 100%;
 }
 
 .hero__caption {
