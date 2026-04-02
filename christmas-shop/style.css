@@ -25,6 +25,10 @@
   text-decoration: none;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .logo span {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
@@ -53,8 +57,13 @@
   color: #181C29;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: 0.3s;
+}
+
+.nav__link:hover {
+  background-color: rgba(255, 70, 70, 0.1);
+  color: #FF4646;
 }
 
 .menu-toggle {
@@ -88,18 +97,18 @@
     position: absolute;
     transition: 0.3s;
   }
-
+  
   .menu-toggle span {
     background-color: transparent;
   }
-
+  
   .menu-toggle span::before {
     content: '';
-    top: -4px;
+    top: -4.5px;
   }
-
+  
   .menu-toggle span::after {
     content: '';
-    top: 4px;
+    top: 4.5px; 
   }
 }
