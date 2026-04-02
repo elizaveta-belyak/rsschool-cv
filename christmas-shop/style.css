@@ -81,9 +81,8 @@
   .container {
     padding: 0 8px;
   }
-  .header__inner {
-    padding: 12px 0;
-  }
+  .header { height: auto; min-height: 64px; }
+  
   .hero__title {
     font-size: 28px;
   }
@@ -130,12 +129,12 @@
   
   .menu-toggle:hover span::before {
     top: 0;
-    transform: rotate(45deg) translateX(0.5px);
+    transform: rotate(45deg);
   }
 
   .menu-toggle:hover span::after {
     top: 0;
-    transform: rotate(-45deg) translateX(-0.5px);
+    transform: rotate(-45deg);
   }
 }
 
