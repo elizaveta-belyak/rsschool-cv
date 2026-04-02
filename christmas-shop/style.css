@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600;700&display=swap');
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 82px;
+  padding: 0 82px; 
+  box-sizing: border-box;
 }
 
 .header {
-  padding: 0 0; 
   background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}  
+  padding: 12px 0;
+  width: 100%;
+}
 
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 20px;
+  padding: 0;
   text-decoration: none;
 }
 
@@ -72,7 +77,10 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 8px;
+    padding: 0 8px; 
+  }
+  .header__inner {
+    padding: 12px 0;
   }
   .nav {
     display: none;
@@ -162,6 +170,9 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
 }
 
 .hero__br {
