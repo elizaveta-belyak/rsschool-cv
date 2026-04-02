@@ -220,7 +220,3 @@
   margin: 0;
   text-transform: none;
 }
-
-.hero__content > * + * {
-  margin-top: 12px;
-}
