@@ -164,6 +164,16 @@
   margin: 0 auto;
 }
 
+.hero__br {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .hero__br {
+    display: inline;
+  }
+}
+
 .hero__content {
   width: 426px; 
   max-width: 100%;
