@@ -148,6 +148,14 @@ body {
   color: #FFFFFF;
 }
 
+.br-mobile {
+  display: none;
+}
+
+.br-desktop, .br-all {
+  display: inline;
+}
+
 /* АДАПТИВ */
 @media (max-width: 768px) {
   .container {
@@ -162,6 +170,14 @@ body {
     font-size: 28px;
   }
 
+  .br-desktop {
+    display: none;
+  }
+
+  .br-mobile {
+    display: inline;
+  }
+  
   /* бургер-меню */
   .menu-toggle {
     display: flex;
