@@ -158,7 +158,9 @@ body {
 
 /* ABOUT */
 .about {
+  max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
   min-height: 648px;
   background-color: #FF4646;
   background-image: url('assets/images/about-bg.png');
