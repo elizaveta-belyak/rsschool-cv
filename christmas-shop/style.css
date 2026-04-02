@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 .container {
   max-width: 1240px;
@@ -110,5 +110,15 @@
   .menu-toggle span::after {
     content: '';
     top: 4.5px; 
+  }
+  
+  .menu-toggle:hover span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle:hover span::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }
