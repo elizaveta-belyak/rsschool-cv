@@ -1,19 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600;700&display=swap');
+/* ОБЩИЕ НАСТРОЙКИ И ШРИФТЫ */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #181C29;
+  line-height: 1.5;
+}
+
+/* КОНТЕЙНЕР */
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 82px;
-  box-sizing: border-box;
   width: 100%;
 }
 
+/* ШАПКА */
 .header {
   background-color: #ffffff;
-  width: 100%;
   height: 64px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header__inner {
@@ -21,45 +37,33 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0; 
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0;
   text-decoration: none;
-}
-
-.logo:hover {
-  cursor: pointer;
+  color: #181C29;
 }
 
 .logo span {
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  line-height: 1.3;
-  letter-spacing: 0.05em;
   font-weight: 600;
-  color: #181C29;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
+/* НАВИГАЦИЯ МЕНЮ */
 .nav__list {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 .nav__link {
-  display: inline-block;
   padding: 12px 20px;
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  line-height: 1.3;
   letter-spacing: 0.05em;
   color: #181C29;
   text-decoration: none;
@@ -73,34 +77,98 @@
   color: #FF4646;
 }
 
-.menu-toggle {
-  display: none;
+/* КНОПКА */
+.btn-primary {
+  display: inline-block;
+  padding: 20px 32px;
+  background-color: #181C29;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
+.btn-primary:hover {
+  background-color: #FFFFFF;
+  color: #181C29;
+}
+
+/* HERO */
+.hero {
+  max-width: 1440px;
+  width: 100%;
+  height: 524px;
+  margin: 0 auto;
+  background-color: #FF4646;
+  background-image: url('assets/images/hero-lights.png'), url('assets/images/hero-ball.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.hero__content {
+  width: 426px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* расстояния внутри HERO */
+.hero__content > * + * {
+  margin-top: 12px;
+}
+
+.hero__title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.hero__caption {
+  font-family: 'Allura', cursive;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+/* АДАПТИВ */
 @media (max-width: 768px) {
   .container {
-    padding: 0 8px;
+    padding: 0 8px; 
   }
-  .header { height: auto; min-height: 64px; }
-  
-  .hero__title {
-    font-size: 28px;
-  }
-  .hero__br {
-    display: inline;
-  }
+
   .nav {
     display: none;
   }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  /* бургер-меню */
   .menu-toggle {
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     cursor: pointer;
     position: relative;
   }
+
   .menu-toggle span,
   .menu-toggle span::before,
   .menu-toggle span::after {
@@ -108,114 +176,15 @@
     width: 20px;
     height: 1px;
     background-color: #181C29;
-    border-radius: 2px;
     position: absolute;
     transition: 0.3s;
   }
-  
-  .menu-toggle span {
-    background-color: transparent;
-  }
-  
-  .menu-toggle span::before {
-    content: '';
-    top: -4.5px;
-  }
-  
-  .menu-toggle span::after {
-    content: '';
-    top: 4.5px; 
-  }
-  
-  .menu-toggle:hover span::before {
-    top: 0;
-    transform: rotate(45deg);
-  }
 
-  .menu-toggle:hover span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-}
+  .menu-toggle span { background-color: transparent; }
+  .menu-toggle span::before { content: ''; top: -4.5px; }
+  .menu-toggle span::after { content: ''; top: 4.5px; }
 
-.btn-primary {
-  display: inline-block;
-  padding: 20px 32px;
-  background-color: #181C29;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 20px;
-  border: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #FFFFFF;
-  color: #181C29;
-  cursor: pointer;
-}
-
-.hero {
-  max-width: 1440px;
-  width: 100%;
-  height: 524px;
-  background-color: #FF4646;
-  background-image: 
-    url('assets/images/hero-lights.png'), 
-    url('assets/images/hero-ball.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  overflow: hidden;
-}
-
-.hero__br {
-  display: none;
-}
-
-.hero__content {
-  width: 426px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.hero__content > * + * {
-  margin-top: 12px;
-}
-
-.hero__title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin: 0;
-  width: 100%;
-}
-
-.hero__caption {
-  font-family: 'Allura', cursive;
-  font-size: 24px;
-  line-height: 1; 
-  color: #FFFFFF;
-  text-align: center;
-  margin: 0;
-  text-transform: none;
+  /* крестик при наведении */
+  .menu-toggle:hover span::before { transform: rotate(45deg); top: 0; }
+  .menu-toggle:hover span::after { transform: rotate(-45deg); top: 0; }
 }
