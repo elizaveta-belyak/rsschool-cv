@@ -306,6 +306,64 @@ body {
   }
 }
 
+/* АДАПТИВ МЕНЮ w768 */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-mobile.active {
+    display: flex;
+  }
+
+  .nav-mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+  }
+
+  .nav-mobile__item {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-mobile__link {
+    font-size: 24px;
+    line-height: 1.52;
+    color: #181C29;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    transition: 0.3s;
+  }
+
+  .nav-mobile__link:hover {
+    color: #FF4646;
+  }
+
+  .nav-mobile__close {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
 /* АДАПТИВ ABOUT w380 */
 @media (max-width: 380px) {
   .about {
@@ -331,63 +389,6 @@ body {
     height: 528px;
     margin-left: 0;
   }
-}
-
-/* АДАПТИВ МЕНЮ w768 */
-.nav-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 768px;
-  height: 960px;
-  background-color: #FFFFFF;
-  z-index: 1000;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-mobile.active {
-  display: flex;
-}
-
-.nav-mobile__list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  list-style: none;
-  margin: 348px 0;
-}
-
-.nav-mobile__item {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-mobile__link {
-  font-size: 24px;
-  line-height: 1.52;
-  color: #181C29;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  transition: 0.3s;
-}
-
-.nav-mobile__link:hover {
-  color: #FF4646;
-}
-
-.nav-mobile__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 32px;
-  cursor: pointer;
 }
 
 /* АДАПТИВ МЕНЮ w380 */
