@@ -114,11 +114,11 @@
   
   .menu-toggle:hover span::before {
     top: 0;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(0.5px);
   }
 
   .menu-toggle:hover span::after {
     top: 0;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateX(-0.5px);
   }
 }
