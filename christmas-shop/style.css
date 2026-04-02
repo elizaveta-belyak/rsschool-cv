@@ -54,6 +54,10 @@ body {
   text-transform: uppercase;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 /* НАВИГАЦИЯ МЕНЮ */
 .nav__list {
   display: flex;
