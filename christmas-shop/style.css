@@ -229,6 +229,114 @@ body {
   object-fit: cover;
 }
 
+.cta {
+  width: 100%;
+  height: 668px;
+  background-color: #FF4646;
+  background-image: url('assets/images/cta-bg-1.png'), url('assets/images/cta-bg-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta__container {
+  width: 426px;
+  height: 428px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cta__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  line-height: 1.52;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+/* КНОПКА CTA */
+.cta__btn {
+  width: 235px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #181C29;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.cta__btn:hover {
+  background-color: #FFFFFF;
+  color: #181C29;
+}
+
+.cta__timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cta__caption {
+  font-family: 'Allura', cursive;
+  font-size: 24px;
+  line-height: 1;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+
+/* ТАЙМЕР, ну у меня не активный, эх */
+.timer {
+  width: 344px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__item {
+  width: 80px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__num {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.timer__text {
+  font-size: 12px;
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+
+.timer__divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 /* АДАПТИВ */
 @media (max-width: 768px) {
   .container {
@@ -396,5 +504,18 @@ body {
   .nav-mobile {
     width: 380px;
     height: 748px;
+  }
+}
+
+/* АДАПТИВ CTA w380 */
+@media (max-width: 380px) {
+  .cta {
+    height: 704px;
+  }
+
+  .cta__container {
+    width: 364px;
+    height: 464px;
+    padding: 60px 0;
   }
 }
