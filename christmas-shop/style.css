@@ -230,8 +230,10 @@ body {
 }
 
 .cta {
-  width: 100%;
+  max-width: 1440px;
+  width: calc(100% - 16px);
   height: 668px;
+  margin: 0 auto;
   background-color: #FF4646;
   background-image: url('assets/images/cta-bg-1.png'), url('assets/images/cta-bg-2.png');
   background-position: center;
@@ -240,6 +242,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
 }
 
 .cta__container {
@@ -328,7 +332,7 @@ body {
 .timer__text {
   font-size: 12px;
   color: #FFFFFF;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .timer__divider {
@@ -509,9 +513,12 @@ body {
 
 /* АДАПТИВ CTA w380 */
 @media (max-width: 380px) {
-  .cta {
+  cta {
+    width: calc(100% - 16px);
     height: 704px;
+    margin: 0 8px;
   }
+}
 
   .cta__container {
     width: 364px;
