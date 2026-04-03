@@ -344,6 +344,101 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+/* FOOTER */
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 60px 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__cards {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.footer__card {
+  flex: 1;
+  height: 204px;
+  background-color: #ECF3F8;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.footer__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.footer__card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: 0.16em;
+  color: #181C29;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footer__card-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: 0.08em;
+  color: #181C29;
+  text-transform: uppercase;
+}
+
+.footer__bottom {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer__copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.48;
+  color: #181C29;
+  margin-bottom: 12px;
+}
+
+.footer__school {
+  font-family: 'Allura', cursive;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #181C29;
+}
+
 /* АДАПТИВ */
 @media (max-width: 768px) {
   .container {
@@ -478,6 +573,24 @@ body {
     line-height: 1;
   }
 
+/* АДАПТИВ ФУТЕР 768px */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .footer__cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer__card {
+    width: 100%;
+    height: 204px;
+  }
+}
+
 /* АДАПТИВ ABOUT w380 */
 @media (max-width: 380px) {
   .about {
@@ -524,3 +637,9 @@ body {
     padding: 60px 0;
   }
 }
+
+/* АДАПТИВ ФУТЕР 380px */
+@media (max-width: 380px) {
+  .footer__container {
+    width: 364px;
+  }
