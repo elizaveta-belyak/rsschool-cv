@@ -419,8 +419,9 @@ body {
     width: 376px;
     height: 528px;
   }
+} 
 
-/* АДАПТИВ МЕНЮ w768 */
+/* АДАПТИВ МЕНЮ */
 .nav-mobile {
     position: fixed;
     top: 0;
@@ -476,7 +477,6 @@ body {
     cursor: pointer;
     line-height: 1;
   }
-}
 
 /* АДАПТИВ ABOUT w380 */
 @media (max-width: 380px) {
