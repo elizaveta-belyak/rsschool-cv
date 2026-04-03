@@ -375,6 +375,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer__card:hover .footer__card-title,
+.footer__card:hover .footer__card-subtitle {
+  color: #FF4646;
 }
 
 .footer__icon {
@@ -392,6 +399,7 @@ body {
   color: #181C29;
   text-transform: uppercase;
   margin-bottom: 12px;
+  transition: color 0.3s;
 }
 
 .footer__card-subtitle {
@@ -402,6 +410,7 @@ body {
   letter-spacing: 0.08em;
   color: #181C29;
   text-transform: uppercase;
+  transition: color 0.3s;
 }
 
 .footer__bottom {
@@ -421,6 +430,11 @@ body {
 .social-link img {
   width: 40px;
   height: 40px;
+  transition: 0.3s;
+}
+
+.social-link:hover img {
+  filter: invert(44%) sepia(91%) saturate(3429%) hue-rotate(338deg) brightness(101%) contrast(101%);
 }
 
 .footer__copyright {
@@ -437,6 +451,15 @@ body {
   line-height: 1;
   letter-spacing: -0.05em;
   color: #181C29;
+}
+
+.footer__school-link {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer__school-link:hover .footer__school {
+  color: #FF4646;
 }
 
 /* АДАПТИВ */
