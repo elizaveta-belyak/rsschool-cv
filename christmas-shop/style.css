@@ -450,6 +450,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .best__card-img {
@@ -459,7 +460,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -478,7 +479,7 @@ body {
   gap: 8px;
   background-color: #FFFFFF;
   border-radius: 20px; 
-  margin-top: -20px;
+  transform: translateY(-20px);
   position: relative;
   z-index: 2;
   box-sizing: border-box;
