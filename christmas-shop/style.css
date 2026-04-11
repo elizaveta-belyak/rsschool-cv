@@ -392,6 +392,8 @@ body {
   background-size: cover;
   background-position: center;
   padding: 60px 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #FF4646; 
 }
 
 .best__inner {
@@ -441,9 +443,8 @@ body {
 .best__card {
   width: 310px;
   height: 342px;
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-radius: 20px;
-  overflow: hidden;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -453,18 +454,20 @@ body {
 .best__card-img {
   width: 310px;
   height: 230px;
-  background-color: #F0F0F0; 
+  background-color: #F0F0F0;  
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
 
 .best__card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
-
+  
 .best__card-content {
   padding: 20px;
   display: flex;
@@ -473,6 +476,7 @@ body {
   flex-grow: 1;
   background-color: #FFFFFF;
   border-radius: 20px; 
+  margin-top: -20px;
   position: relative;
   z-index: 2;
 }
