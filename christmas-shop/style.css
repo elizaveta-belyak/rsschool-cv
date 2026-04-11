@@ -284,9 +284,8 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 1993px;
-  position: absolute;
-  left: 82px;
+  width: max-content;
+  position: relative;
   transition: transform 0.5s ease;
 }
 
@@ -321,11 +320,11 @@ body {
 }
 
 .slider__buttons {
-  position: absolute;
-  right: 82px;
-  bottom: 60px;
   display: flex;
+  justify-content: flex-end;
   gap: 20px;
+  margin-top: 20px;
+  padding-right: 0; 
 }
 
 .slider__btn {
@@ -338,6 +337,15 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.slider__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.slider__btn:disabled svg {
+  opacity: 1;
 }
 
 /* ЛЕВАЯ КНОПКА */
