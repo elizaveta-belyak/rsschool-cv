@@ -385,15 +385,15 @@ body {
 .best {
   max-width: 1440px;
   width: 100%;
-  height: 554px;
+  height: 554px; 
   margin: 0 auto;
   background-color: #FF4646;
   background-image: url('assets/images/bg-best-gifts.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   padding: 60px 0;
-  overflow: hidden;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
 }
 
 .best__inner {
@@ -436,29 +436,25 @@ body {
 .best__grid {
   display: flex;
   gap: 12px;
-  width: 100%;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .best__card {
   width: 310px;
   height: 342px;
-  background-color: transparent; 
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  transition: 0.3s;
   position: relative;
+  background: none;
 }
 
-..best__card-img {
+.best__card-img {
   width: 310px;
   height: 230px;
-  background-color: #F0F0F0; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px 20px 0 0;
+  background-color: #F0F0F0;
+  border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
