@@ -443,7 +443,7 @@ body {
 
 .best__card {
   width: 310px;
-  height: auto;
+  height: 342px;
   background-color: transparent;
   border-radius: 20px;
   text-decoration: none;
@@ -471,6 +471,7 @@ body {
 }
   
 .best__card-content {
+  height: 132px;
   padding: 20px;
   display: flex;
   flex-direction: column;
