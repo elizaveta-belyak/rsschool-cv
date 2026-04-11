@@ -179,58 +179,65 @@
   </div>
 </footer>
   <script>
-  const track = document.querySelector('.slider__track');
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
-
-  let currentStep = 0;
-  const totalSteps = 3;
-
-  function updateSlider() {
-    const windowWidth = document.documentElement.clientWidth;
-    const trackWidth = 1993;
+    const track = document.querySelector('.slider__track');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const sliderWindow = document.querySelector('.slider__window');
     
-    const offset = windowWidth > 768 ? 82 : 8;
+    let currentStep = 0;
     
-    const maxScroll = trackWidth - (windowWidth - offset);
-    const stepSize = maxScroll / totalSteps;
+    function updateSlider() {
+      const windowWidth = document.documentElement.clientWidth;
+      const totalClicks = windowWidth > 768 ? 3 : 6;
 
-    track.style.transform = `translateX(-${currentStep * stepSize}px)`;
+      if (currentStep > totalClicks) currentStep = totalClicks;
 
-    if (currentStep === 0) {
-      btnPrev.style.opacity = '0.4';
-      btnPrev.style.pointerEvents = 'none';
-      btnNext.style.opacity = '1';
-      btnNext.style.pointerEvents = 'all';
-    } else if (currentStep === totalSteps) {
-      btnNext.style.opacity = '0.4';
-      btnNext.style.pointerEvents = 'none';
-      btnPrev.style.opacity = '1';
-      btnPrev.style.pointerEvents = 'all';
-    } else {
-      btnPrev.style.opacity = '1';
-      btnNext.style.opacity = '1';
-      btnPrev.style.pointerEvents = 'all';
-      btnNext.style.pointerEvents = 'all';
+      const totalWidth = track.scrollWidth; 
+      const visibleArea = sliderWindow.offsetWidth;
+    
+      const stepSize = (totalWidth - visibleArea) / totalClicks;
+
+      track.style.transform = `translateX(-${currentStep * stepSize}px)`;
+
+      if (currentStep === 0) {
+        btnPrev.disabled = true;
+        btnPrev.style.opacity = '0.4';
+        btnPrev.style.cursor = 'not-allowed';
+      } else {
+        btnPrev.disabled = false;
+        btnPrev.style.opacity = '1';
+        btnPrev.style.cursor = 'pointer';
+      }
+
+      if (currentStep >= totalClicks) {
+        btnNext.disabled = true;
+        btnNext.style.opacity = '0.4';
+        btnNext.style.cursor = 'not-allowed';
+      } else {
+        btnNext.disabled = false;
+        btnNext.style.opacity = '1';
+        btnNext.style.cursor = 'pointer';
+      }
     }
-  }
 
-  btnNext.addEventListener('click', () => {
-    if (currentStep < totalSteps) {
-      currentStep++;
-      updateSlider();
-    }
-  });
+    btnNext.addEventListener('click', () => {
+      const totalClicks = document.documentElement.clientWidth > 768 ? 3 : 6;
+      if (currentStep < totalClicks) {
+        currentStep++;
+        updateSlider();
+      }
+    });
 
-  btnPrev.addEventListener('click', () => {
-    if (currentStep > 0) {
-      currentStep--;
-      updateSlider();
-    }
-  });
+    btnPrev.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateSlider();
+      }
+    });
 
-  window.addEventListener('resize', updateSlider);
-  updateSlider();
-</script>
+    window.addEventListener('resize', updateSlider);
+  
+    updateSlider();
+  </script>
 </body>
 </html>
