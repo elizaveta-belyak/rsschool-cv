@@ -313,14 +313,17 @@ body {
 
 /* КНОПКИ */
 .slider__controls {
-  width: 1276px;
-  height: 56px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
 }
 
 .slider__buttons {
+  position: absolute;
+  right: 82px;
+  bottom: 60px;
   display: flex;
   gap: 20px;
 }
@@ -617,8 +620,12 @@ body {
   }
 
   .slider__controls {
-  width: 100%;
-  padding: 0 8px;
+  max-width: 768px;
+  margin: 0 auto;
+  }
+
+  .slider__buttons {
+  right: 8px; /* Расстояние 8px от правого края для планшета */
   }
   
   /* бургер-меню */
@@ -783,7 +790,13 @@ body {
   }
 
 .slider__controls {
-  width: 364px;
+  max-width: 380px;
+}
+
+.slider__buttons {
+  right: 8px;
+  width: calc(100% - 16px);
+  justify-content: flex-end;
 }
 
 /* АДАПТИВ МЕНЮ w380 */
