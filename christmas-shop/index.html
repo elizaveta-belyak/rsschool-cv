@@ -178,5 +178,59 @@
     </div>
   </div>
 </footer>
+  <script>
+  const track = document.querySelector('.slider__track');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+
+  let currentStep = 0;
+  const totalSteps = 3;
+
+  function updateSlider() {
+    const windowWidth = document.documentElement.clientWidth;
+    const trackWidth = 1993;
+    
+    const offset = windowWidth > 768 ? 82 : 8;
+    
+    const maxScroll = trackWidth - (windowWidth - offset);
+    const stepSize = maxScroll / totalSteps;
+
+    track.style.transform = `translateX(-${currentStep * stepSize}px)`;
+
+    if (currentStep === 0) {
+      btnPrev.style.opacity = '0.4';
+      btnPrev.style.pointerEvents = 'none';
+      btnNext.style.opacity = '1';
+      btnNext.style.pointerEvents = 'all';
+    } else if (currentStep === totalSteps) {
+      btnNext.style.opacity = '0.4';
+      btnNext.style.pointerEvents = 'none';
+      btnPrev.style.opacity = '1';
+      btnPrev.style.pointerEvents = 'all';
+    } else {
+      btnPrev.style.opacity = '1';
+      btnNext.style.opacity = '1';
+      btnPrev.style.pointerEvents = 'all';
+      btnNext.style.pointerEvents = 'all';
+    }
+  }
+
+  btnNext.addEventListener('click', () => {
+    if (currentStep < totalSteps) {
+      currentStep++;
+      updateSlider();
+    }
+  });
+
+  btnPrev.addEventListener('click', () => {
+    if (currentStep > 0) {
+      currentStep--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateSlider);
+  updateSlider();
+</script>
 </body>
 </html>
