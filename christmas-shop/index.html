@@ -183,9 +183,9 @@
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
     const sliderWindow = document.querySelector('.slider__window');
-    
+
     let currentStep = 0;
-    
+
     function updateSlider() {
       const windowWidth = document.documentElement.clientWidth;
       const totalClicks = windowWidth > 768 ? 3 : 6;
@@ -194,30 +194,12 @@
 
       const totalWidth = track.scrollWidth; 
       const visibleArea = sliderWindow.offsetWidth;
-    
       const stepSize = (totalWidth - visibleArea) / totalClicks;
 
       track.style.transform = `translateX(-${currentStep * stepSize}px)`;
 
-      if (currentStep === 0) {
-        btnPrev.disabled = true;
-        btnPrev.style.opacity = '0.4';
-        btnPrev.style.cursor = 'not-allowed';
-      } else {
-        btnPrev.disabled = false;
-        btnPrev.style.opacity = '1';
-        btnPrev.style.cursor = 'pointer';
-      }
-
-      if (currentStep >= totalClicks) {
-        btnNext.disabled = true;
-        btnNext.style.opacity = '0.4';
-        btnNext.style.cursor = 'not-allowed';
-      } else {
-        btnNext.disabled = false;
-        btnNext.style.opacity = '1';
-        btnNext.style.cursor = 'pointer';
-      }
+      btnPrev.disabled = (currentStep === 0);
+      btnNext.disabled = (currentStep >= totalClicks);
     }
 
     btnNext.addEventListener('click', () => {
@@ -236,7 +218,6 @@
     });
 
     window.addEventListener('resize', updateSlider);
-  
     updateSlider();
   </script>
 </body>
