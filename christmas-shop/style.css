@@ -241,13 +241,13 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
 .slider__header {
   width: 426px;
   height: 72px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;  
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -385,7 +385,7 @@ body {
 .best {
   max-width: 1440px;
   width: 100%;
-  min-height: 554px;
+  height: 554px;
   margin: 0 auto;
   background-color: #FF4646;
   background-image: url('assets/images/bg-best-gifts.png');
@@ -471,6 +471,10 @@ body {
   flex-direction: column;
   gap: 8px;
   flex-grow: 1;
+  background-color: #FFFFFF;
+  border-radius: 20px; 
+  position: relative;
+  z-index: 2;
 }
 
 .best__card-tag {
