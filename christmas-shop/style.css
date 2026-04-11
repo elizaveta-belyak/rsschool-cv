@@ -337,13 +337,13 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 /* ЛЕВАЯ КНОПКА */
 .btn-left {
   border: 1px solid rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF; 
 }
 
 /* ПРАВАЯ КНОПКА */
@@ -352,10 +352,25 @@ body {
   color: #FFFFFF;
 }
 
+.slider__btn svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.4; 
+  transition: 0.3s;
+}
+
+.btn-right svg {
+  opacity: 1;
+}
+
 /* ПОВЕДЕНИЕ КНОПОК */
 .slider__btn:hover {
   background-color: #FFFFFF;
   color: #FF4646;
+}
+
+.slider__btn:hover svg {
+  opacity: 1;
 }
 
 /* БЛОК CTA */
