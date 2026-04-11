@@ -440,7 +440,7 @@ body {
 
 .best__card {
   width: 310px;
-  background-color: transparent;
+  background-color: transparent !important;
   border-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -456,16 +456,16 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px 20px 0 0;
 }
 
 .best__card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0 0 20px 20px;
+  display: block;
+  border-radius: 20px 20px 0 0;
 }
-
 .best__card-content {
   padding: 20px;
   display: flex;
@@ -476,7 +476,7 @@ body {
   margin-top: -20px;
   position: relative;
   z-index: 2;
-  min-height: 112px; 
+  box-shadow: 0 -1px 0 0 #FFFFFF; 
 }
 
 .best__card-tag {
