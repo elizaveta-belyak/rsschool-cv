@@ -1122,7 +1122,7 @@ body {
 /* ТЕКСТ ВНУТРИ КАРТОЧЕК */
 .card-title {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   color: #121221;
@@ -1134,6 +1134,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 12px;
+  line-height: 1.3;
   text-transform: uppercase;
   display: block;
   margin-bottom: 8px;
