@@ -1030,10 +1030,10 @@ body {
   background-color: #FF4646;
   border-radius: 20px;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 1440px; 
+  margin: 0 auto; 
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   padding: 60px 0; 
   box-sizing: border-box;
   min-height: 1394px; 
@@ -1044,11 +1044,11 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; 
+  width: 100%;
   max-width: 1440px; 
   height: 200px;
   background-image: url('assets/images/decor.png');
-  background-size: contain;
+  background-size: contain; 
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 1;
@@ -1110,8 +1110,9 @@ body {
 /* СЕТКА КАРТОЧЕК */
 .gifts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   max-width: 1276px;
+  width: 100%;
   gap: 12px;
   justify-items: center;
   margin: 0;
