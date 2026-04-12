@@ -1127,6 +1127,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.52;
+  letter-spacing: 0.08em;
   color: #181C29;
   text-transform: uppercase;
   transition: 0.3s;
