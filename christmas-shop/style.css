@@ -457,6 +457,7 @@ body {
   flex-direction: column;
   transition: 0.3s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .best__card-img {
@@ -1130,8 +1131,12 @@ body {
   letter-spacing: 0.08em;
   color: #181C29;
   text-transform: uppercase;
-  transition: 0.3s;
+  transition: color 0.3s ease;
   margin: 0;
+}
+
+.best__card:hover .card-title {
+  color: #FF4646;
 }
 
 .card-tag {
