@@ -1030,34 +1030,39 @@ body {
   background-color: #FF4646;
   border-radius: 20px;
   width: 100%;
-  min-height: 1394px; 
-  display: flex;
-  align-items: center; 
-  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  padding: 60px 0; 
+  box-sizing: border-box;
+  min-height: 1394px; 
 }
 
 .gifts__decor {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; 
+  max-width: 1440px; 
   height: 200px;
   background-image: url('assets/images/decor.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   pointer-events: none;
+  z-index: 1;
 }
 
 .gifts__container {
   max-width: 1276px;
   width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
   z-index: 2;
 }
 
@@ -1105,16 +1110,21 @@ body {
 /* СЕТКА КАРТОЧЕК */
 .gifts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); 
+  max-width: 1276px;
   gap: 12px;
-  width: 100%;
+  justify-items: center;
+  margin: 0;
 }
 
 /* АДАПТИВ СТРАНИЦЫ GIFT 768px */
 @media (max-width: 768px) {
-  .gifts { min-height: 2456px; }
-  .gifts__decor { height: 108px; }
-  
+  .gifts { 
+    min-height: 2456px; 
+  }
+  .gifts__decor { 
+    height: 108px; 
+  }
   .gifts__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1122,8 +1132,12 @@ body {
 
 /* АДАПТИВ СТРАНИЦЫ GIFT 380px */
 @media (max-width: 380px) {
-  .gifts { min-height: 4676px; }
-  .gifts__decor { height: 53px; }
+  .gifts { 
+    min-height: 4676px;
+  }
+  .gifts__decor { 
+    height: 53px; 
+  }
   
   .gifts__title {
     width: 364px;
@@ -1140,6 +1154,7 @@ body {
 
   .gifts__grid {
     grid-template-columns: 1fr;
+    max-width: 310px; 
   }
 }
 
