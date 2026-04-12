@@ -1110,12 +1110,33 @@ body {
 /* СЕТКА КАРТОЧЕК */
 .gifts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 1276px;
-  width: 100%;
+  grid-template-columns: repeat(4, 310px); 
   gap: 12px;
-  justify-items: center;
+  justify-content: center;
+  align-content: start;
   margin: 0;
+  width: 1276px;
+  height: 1050px;
+}
+
+/* ТЕКСТ ВНУТРИ КАРТОЧЕК */
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121221;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
 }
 
 /* АДАПТИВ СТРАНИЦЫ GIFT 768px */
@@ -1127,7 +1148,9 @@ body {
     height: 108px; 
   }
   .gifts__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 310px);
+    width: 752px;
+    height: 2112px;
   }
 }
 
@@ -1154,8 +1177,9 @@ body {
   }
 
   .gifts__grid {
-    grid-template-columns: 1fr;
-    max-width: 310px; 
+    grid-template-columns: 310px;
+    width: 364px;
+    height: 4236px;
   }
 }
 
