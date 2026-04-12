@@ -1040,7 +1040,7 @@ body {
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
-  transition: 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* ПОКАЗ КНОПКИ НАВЕРХ ТОЛЬКО на экранах 768px и меньше */
@@ -1053,5 +1053,11 @@ body {
 }
 
 .back-to-top:hover {
-  background-color: rgba(255, 70, 70, 0.1); 
+  background-color: #FF4646;
+  border-color: #FFFFFF;
+}
+
+.back-to-top:hover svg path {
+  stroke: #FFFFFF;
+  transition: stroke 0.3s;
 }
