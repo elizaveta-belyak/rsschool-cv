@@ -77,13 +77,10 @@ body {
   transition: 0.3s;
 }
 
-.nav__link:hover,
-.nav__link--active {
-  background-color: rgba(255, 70, 70, 0.1);
-  color: #FF4646;
-}
 
 .nav__link--active {
+  background-color: rgba(255, 70, 70, 0.1); 
+  color: #FF4646;
   pointer-events: none;
   cursor: default;
 }
@@ -105,10 +102,6 @@ body {
   border: none;
 }
 
-.btn-primary:hover {
-  background-color: #FFFFFF;
-  color: #181C29;
-}
 
 /* HERO */
 .hero {
@@ -377,15 +370,6 @@ body {
   opacity: 1;
 }
 
-/* ПОВЕДЕНИЕ КНОПОК */
-.slider__btn:hover {
-  background-color: #FFFFFF;
-  color: #FF4646;
-}
-
-.slider__btn:hover svg {
-  opacity: 1;
-}
 
 /* БЛОК BEST */
 .best {
@@ -449,7 +433,7 @@ body {
 
 .best__card {
   width: 310px;
-  height: 362px
+  height: 362px;
   background-color: transparent;
   border-radius: 20px;
   text-decoration: none;
@@ -516,10 +500,6 @@ body {
   margin: 0;
 }
 
-/* Поведение карточек */
-.best__card:hover .best__card-name {
-  color: #FF4646;
-}
 
 /* АДАПТИВ блока Best 768px */
 @media (max-width: 768px) {
@@ -615,10 +595,6 @@ body {
   text-decoration: none;
 }
 
-.cta__btn:hover {
-  background-color: #FFFFFF;
-  color: #181C29;
-}
 
 .cta__timer-wrapper {
   display: flex;
@@ -709,10 +685,6 @@ body {
   transition: 0.3s;
 }
 
-.footer__card:hover .footer__card-title,
-.footer__card:hover .footer__card-subtitle {
-  color: #FF4646;
-}
 
 .footer__icon {
   width: 80px;
@@ -763,10 +735,6 @@ body {
   transition: 0.3s;
 }
 
-.social-link:hover img {
-  filter: invert(44%) sepia(91%) saturate(3429%) hue-rotate(338deg) brightness(101%) contrast(101%);
-}
-
 .footer__copyright {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -788,9 +756,6 @@ body {
   transition: 0.3s;
 }
 
-.footer__school-link:hover .footer__school {
-  color: #FF4646;
-}
 
 /* АДАПТИВ */
 @media (max-width: 768px) {
@@ -1105,9 +1070,6 @@ body {
   transition: 0.3s;
 }
 
-.filter-tag:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
 
 /* СЕТКА КАРТОЧЕК */
 .gifts__grid {
@@ -1133,10 +1095,6 @@ body {
   text-transform: uppercase;
   transition: color 0.3s ease;
   margin: 0;
-}
-
-.best__card:hover .card-title {
-  color: #FF4646;
 }
 
 .card-tag {
@@ -1219,16 +1177,89 @@ body {
   }
 }
 
-.back-to-top:hover {
-  background-color: #FF4646;
-  border-color: #FFFFFF;
-}
-
-.back-to-top:hover svg path {
-  stroke: #FFFFFF;
-  transition: stroke 0.3s;
-}
 
 .work { color: #4361FF; }
 .health { color: #06A44F; }
 .harmony { color: #FF43F7; }
+
+
+
+
+
+/* ИНТЕРАКТИВНЫЕ ЭФФЕКТЫ (ТОЛЬКО ДЛЯ КОМПЬЮТЕРОВ) */
+@media (hover: hover) {
+  
+  /* Навигация в шапке */
+  .nav__link:hover,
+  .nav__link--active {
+  background-color: rgba(255, 70, 70, 0.1);
+  color: #FF4646;
+}
+
+  /* Основные кнопки (btn-primary) */
+  .btn-primary:hover {
+    background-color: #FFFFFF;
+    color: #181C29;
+  }
+
+  /* Кнопки слайдера */
+  .slider__btn:hover {
+    background-color: #FFFFFF;
+    color: #FF4646;
+  }
+  
+  .slider__btn:hover svg {
+    opacity: 1;
+  }
+
+
+  /* Карточки Best Gifts (заголовок) */
+  .best__card:hover .best__card-name,
+  .best__card:hover .card-title {
+    color: #FF4646;
+  }
+  
+
+  /* Кнопка CTA */
+  .cta__btn:hover {
+    background-color: #FFFFFF;
+    color: #181C29;
+  }
+  
+
+  /* Карточки в футере */
+  .footer__card:hover .footer__card-title,
+  .footer__card:hover .footer__card-subtitle {
+    color: #FF4646;
+  }
+
+  /* Иконки соцсетей (фильтр цвета) */
+  .social-link:hover img {
+    filter: invert(44%) sepia(91%) saturate(3429%) hue-rotate(338deg) brightness(101%) contrast(101%);
+  }
+
+  /* Ссылка на школу в футере */
+  .footer__school-link:hover .footer__school {
+    color: #FF4646;
+  }
+
+  /* Фильтры на странице Gifts */
+  .filter-tag:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Кнопка "Наверх" */
+  .back-to-top:hover {
+    background-color: #FF4646;
+    border-color: #FFFFFF;
+  }
+  
+  .back-to-top:hover svg path {
+    stroke: #FFFFFF;
+  }
+
+  /* Ховер в бургер-меню */
+  .nav-mobile__link:hover {
+    color: #FF4646;
+  }
+}
