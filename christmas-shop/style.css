@@ -77,9 +77,15 @@ body {
   transition: 0.3s;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link--active {
   background-color: rgba(255, 70, 70, 0.1);
   color: #FF4646;
+}
+
+.nav__link--active {
+  pointer-events: none;
+  cursor: default;
 }
 
 /* КНОПКА */
