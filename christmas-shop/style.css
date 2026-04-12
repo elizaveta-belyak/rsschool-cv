@@ -483,10 +483,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: -20px; 
+  transform: translateY(-20px); 
   position: relative;
   z-index: 2;
+  margin-bottom: -20px; 
   height: auto; 
+  min-height: 112px;
 }
 
 .best__card-tag {
