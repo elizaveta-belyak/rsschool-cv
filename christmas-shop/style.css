@@ -1169,3 +1169,7 @@ body {
   stroke: #FFFFFF;
   transition: stroke 0.3s;
 }
+
+.work { color: #4361FF; }
+.health { color: #06A44F; }
+.harmony { color: #FF43F7; }
