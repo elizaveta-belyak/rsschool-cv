@@ -1025,6 +1025,114 @@ body {
   }
 }
 
+/* СТРАНИЦА GIFT */
+.gifts {
+  background-color: #FF4646;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gifts__decor {
+  width: 100%;
+  height: 200px;
+  background-image: url('assets/images/decor.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.gifts__container {
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gifts__title {
+  width: 426px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin: 0;
+}
+
+/* ФИЛЬТРЫ */
+.gifts__filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-tag {
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #FF4646;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* СЕТКА КАРТОЧЕК */
+.gifts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+/* АДАПТИВ СТРАНИЦЫ GIFT 768px */
+@media (max-width: 768px) {
+  .gifts__decor { height: 108px; }
+  
+  .gifts__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* АДАПТИВ СТРАНИЦЫ GIFT 380px */
+@media (max-width: 380px) {
+  .gifts__decor { height: 53px; }
+  
+  .gifts__title {
+    width: 364px;
+    height: 240px;
+  }
+
+  .gifts__filters {
+    gap: 0;
+  }
+
+  .filter-tag {
+    padding: 12px 8px;
+  }
+
+  .gifts__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Кнопка наверх на Gifts page */
 .back-to-top {
   display: none;
