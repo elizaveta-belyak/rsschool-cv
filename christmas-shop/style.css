@@ -1114,10 +1114,8 @@ body {
   grid-template-columns: repeat(4, 310px); 
   gap: 12px;
   justify-content: center;
-  align-content: start;
-  margin: 0;
-  width: 1276px;
-  height: 1050px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ТЕКСТ ВНУТРИ КАРТОЧЕК */
@@ -1153,8 +1151,7 @@ body {
   }
   .gifts__grid {
     grid-template-columns: repeat(2, 310px);
-    width: 752px;
-    height: 2112px;
+    width: auto; 
   }
 }
 
@@ -1182,8 +1179,7 @@ body {
 
   .gifts__grid {
     grid-template-columns: 310px;
-    width: 364px;
-    height: 4236px;
+    width: auto;
   }
 }
 
