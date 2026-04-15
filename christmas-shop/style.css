@@ -246,11 +246,12 @@ body {
 .slider__header {
   width: 426px;
   height: 72px;
-  margin-bottom: 20px;  
+  margin: 0 auto 20px auto;  
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center;
 }
 
 .slider__caption {
