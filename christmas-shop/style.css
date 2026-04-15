@@ -826,8 +826,14 @@ body {
   .menu-toggle span::after { content: ''; top: 4.5px; }
 
   /* крестик при наведении */
-  .menu-toggle:hover span::before { transform: rotate(45deg); top: 0; }
-  .menu-toggle:hover span::after { transform: rotate(-45deg); top: 0; }
+  .menu-toggle.active span::before { 
+    transform: rotate(45deg); 
+    top: 0; 
+  }
+  .menu-toggle.active span::after { 
+    transform: rotate(-45deg); 
+    top: 0;
+  }
 }
 
 /* АДАПТИВ ABOUT w768 */
@@ -1268,4 +1274,12 @@ body {
   .nav-mobile__link:hover {
     color: #FF4646;
   }
+
+  .menu-toggle {
+  display: none; 
+  }
+}
+
+.noscroll {
+  overflow: hidden;
 }
