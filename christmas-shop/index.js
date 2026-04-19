@@ -51,13 +51,24 @@ if (track) {
   const sliderWindow = document.querySelector('.slider__window');
   let currentStep = 0;
 
+  let isMobile = window.innerWidth <= 768;
+
   const getSteps = () => window.innerWidth > 768 ? 3 : 6;
 
   function updateSlider() {
     const steps = getSteps();
+    
+    const currentIsMobile = window.innerWidth <= 768;
+    if (isMobile !== currentIsMobile) {
+      currentStep = 0; // Сбрасываем в начало при ресайзе
+      isMobile = currentIsMobile;
+    }
+
     if (currentStep > steps) currentStep = steps;
 
-    const stepSize = (track.scrollWidth - sliderWindow.offsetWidth) / steps;
+    const availableScroll = track.scrollWidth - sliderWindow.offsetWidth;
+    const stepSize = availableScroll / steps;
+    
     track.style.transform = `translateX(-${currentStep * stepSize}px)`;
 
     btnPrev.disabled = (currentStep === 0);
@@ -65,13 +76,20 @@ if (track) {
   }
 
   btnNext.addEventListener('click', () => {
-    if (currentStep < getSteps()) { currentStep++; updateSlider(); }
+    if (currentStep < getSteps()) { 
+      currentStep++; 
+      updateSlider(); 
+    }
   });
 
   btnPrev.addEventListener('click', () => {
-    if (currentStep > 0) { currentStep--; updateSlider(); }
+    if (currentStep > 0) { 
+      currentStep--; 
+      updateSlider(); 
+    }
   });
 
+  // resize сработает правильно
   window.addEventListener('resize', updateSlider);
   updateSlider();
 }
