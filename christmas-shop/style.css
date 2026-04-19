@@ -836,6 +836,10 @@ body {
   }
 }
 
+.nav-mobile {
+  display: none; 
+}
+
 /* АДАПТИВ ABOUT w768 */
 @media (max-width: 768px) {
   .about {
