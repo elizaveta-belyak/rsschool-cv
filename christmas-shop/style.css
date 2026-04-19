@@ -327,6 +327,7 @@ body {
   padding-right: 0; 
 }
 
+/* Общие стили для обеих кнопок */
 .slider__btn {
   width: 56px;
   height: 56px;
@@ -337,38 +338,28 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.slider__btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.slider__btn:disabled svg {
-  opacity: 1;
-}
-
-/* ЛЕВАЯ КНОПКА */
-.btn-left {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #FFFFFF; 
-}
-
-/* ПРАВАЯ КНОПКА */
-.btn-right {
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4); 
   color: #FFFFFF;
 }
 
+/* Стиль для АКТИВНОЙ кнопки (которую можно нажать) */
+.slider__btn:not(:disabled) {
+  border-color: #FFFFFF;
+}
+
+/* Стиль для ВЫКЛЮЧЕННОЙ кнопки */
+.slider__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.4); 
+}
+
+/* 4. Иконка внутри (упрощаем) */
 .slider__btn svg {
   width: 24px;
   height: 24px;
-  opacity: 0.4; 
+  fill: currentColor;
   transition: 0.3s;
-}
-
-.btn-right svg {
-  opacity: 1;
 }
 
 
@@ -822,8 +813,8 @@ body {
   }
 
   .menu-toggle span { background-color: transparent; }
-  .menu-toggle span::before { content: ''; top: -4.5px; }
-  .menu-toggle span::after { content: ''; top: 4.5px; }
+  .menu-toggle span::before { content: ''; top: -5px; } 
+  .menu-toggle span::after { content: ''; top: 5px; }
 
   /* крестик при наведении */
   .menu-toggle.active span::before { 
@@ -1232,6 +1223,11 @@ body {
   }
 
   /* Кнопки слайдера */
+slider__btn:not(:disabled):hover {
+    background-color: #FFFFFF;
+    color: #FF4646;
+  }
+  
   .slider__btn:hover {
     background-color: #FFFFFF;
     color: #FF4646;
