@@ -806,7 +806,7 @@ body {
   .menu-toggle span::after {
     display: block;
     width: 20px;
-    height: 1px;
+    height: 1.5px;
     background-color: #181C29;
     position: absolute;
     transition: 0.3s;
