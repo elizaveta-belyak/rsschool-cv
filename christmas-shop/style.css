@@ -813,8 +813,8 @@ body {
   }
 
   .menu-toggle span { background-color: transparent; }
-  .menu-toggle span::before { content: ''; top: -5px; } 
-  .menu-toggle span::after { content: ''; top: 5px; }
+  .menu-toggle span::before { content: ''; top: -4px; } 
+  .menu-toggle span::after { content: ''; top: 4px; }
 
   /* крестик при наведении */
   .menu-toggle.active span::before { 
