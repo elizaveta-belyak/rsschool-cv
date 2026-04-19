@@ -236,49 +236,6 @@
   </div>
 </footer>
   
-  <script>
-    const track = document.querySelector('.slider__track');
-    const btnPrev = document.getElementById('btn-prev');
-    const btnNext = document.getElementById('btn-next');
-    const sliderWindow = document.querySelector('.slider__window');
-
-    let currentStep = 0;
-
-    function updateSlider() {
-      const windowWidth = document.documentElement.clientWidth;
-      const totalClicks = windowWidth > 768 ? 3 : 6;
-
-      if (currentStep > totalClicks) currentStep = totalClicks;
-
-      const totalWidth = track.scrollWidth; 
-      const visibleArea = sliderWindow.offsetWidth;
-      const stepSize = (totalWidth - visibleArea) / totalClicks;
-
-      track.style.transform = `translateX(-${currentStep * stepSize}px)`;
-
-      btnPrev.disabled = (currentStep === 0);
-      btnNext.disabled = (currentStep >= totalClicks);
-    }
-
-    btnNext.addEventListener('click', () => {
-      const totalClicks = document.documentElement.clientWidth > 768 ? 3 : 6;
-      if (currentStep < totalClicks) {
-        currentStep++;
-        updateSlider();
-      }
-    });
-
-    btnPrev.addEventListener('click', () => {
-      if (currentStep > 0) {
-        currentStep--;
-        updateSlider();
-      }
-    });
-
-    window.addEventListener('resize', updateSlider);
-    updateSlider();
-  </script>
-  
   <script src="./index.js"></script>
   
 </body>
