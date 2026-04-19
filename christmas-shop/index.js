@@ -1,54 +1,44 @@
-/* --- ТАЙМЕР --- */
+/* ТАЙМЕР */
 function updateTimer() {
+  const elD = document.getElementById('days');
+  const elH = document.getElementById('hours');
+  const elM = document.getElementById('minutes');
+  const elS = document.getElementById('seconds');
+
+  if (!elD || !elH || !elM || !elS) return;
+
   const now = new Date();
-  const nextYear = now.getUTCFullYear() + 1;
-  const newYear = new Date(Date.UTC(nextYear, 0, 1));
-  const diff = newYear - now;
+  const diff = new Date(Date.UTC(now.getUTCFullYear() + 1, 0, 1)) - now;
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-
-  const daysElement = document.getElementById('days');
-  if (daysElement) {
-    daysElement.textContent = d;
-    document.getElementById('hours').textContent = h;
-    document.getElementById('minutes').textContent = m;
-    document.getElementById('seconds').textContent = s;
-  }
+  elD.textContent = Math.floor(diff / 86400000);
+  elH.textContent = Math.floor((diff / 3600000) % 24);
+  elM.textContent = Math.floor((diff / 60000) % 60);
+  elS.textContent = Math.floor((diff / 1000) % 60);
 }
 setInterval(updateTimer, 1000);
 updateTimer();
 
-/* --- БУРГЕР МЕНЮ --- */
-const navOpenBtn = document.getElementById('nav-open');
-const navCloseBtn = document.getElementById('nav-close');
-const navMobileMenu = document.getElementById('nav-mobile');
-const bodyElement = document.body;
+/* БУРГЕР МЕНЮ */
+const navBtn = document.getElementById('nav-open');
+const navMenu = document.getElementById('nav-mobile');
 
 function closeMenu() {
-  navMobileMenu?.classList.remove('active');
-  navOpenBtn?.classList.remove('active');
-  bodyElement.classList.remove('noscroll');
+  navMenu?.classList.remove('active');
+  navBtn?.classList.remove('active');
+  document.body.classList.remove('noscroll');
 }
 
-if (navOpenBtn) {
-  navOpenBtn.addEventListener('click', () => {
-    navMobileMenu.classList.add('active');
-    navOpenBtn.classList.add('active'); 
-    bodyElement.classList.add('noscroll');
-  });
-}
+navBtn?.addEventListener('click', () => {
+  const isOpening = !navMenu.classList.contains('active');
+  navMenu.classList.toggle('active');
+  navBtn.classList.toggle('active');
+  document.body.classList.toggle('noscroll', isOpening);
+});
 
-navCloseBtn?.addEventListener('click', closeMenu);
-
-// Закрытие по ссылкам
 document.querySelectorAll('.nav-mobile__link').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
 
-// Закрытие при ресайзе
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) closeMenu();
 });
@@ -61,42 +51,36 @@ if (track) {
   const sliderWindow = document.querySelector('.slider__window');
   let currentStep = 0;
 
-  function updateSlider() {
-    const totalClicks = window.innerWidth > 768 ? 3 : 6;
-    if (currentStep > totalClicks) currentStep = totalClicks;
+  const getSteps = () => window.innerWidth > 768 ? 3 : 6;
 
-    const stepSize = (track.scrollWidth - sliderWindow.offsetWidth) / totalClicks;
+  function updateSlider() {
+    const steps = getSteps();
+    if (currentStep > steps) currentStep = steps;
+
+    const stepSize = (track.scrollWidth - sliderWindow.offsetWidth) / steps;
     track.style.transform = `translateX(-${currentStep * stepSize}px)`;
 
     btnPrev.disabled = (currentStep === 0);
-    btnNext.disabled = (currentStep >= totalClicks);
+    btnNext.disabled = (currentStep >= steps);
   }
 
   btnNext.addEventListener('click', () => {
-    const totalClicks = window.innerWidth > 768 ? 3 : 6;
-    if (currentStep < totalClicks) { currentStep++; updateSlider(); }
+    if (currentStep < getSteps()) { currentStep++; updateSlider(); }
   });
 
   btnPrev.addEventListener('click', () => {
     if (currentStep > 0) { currentStep--; updateSlider(); }
   });
 
-  window.addEventListener('resize', () => {
-    currentStep = 0;
-    updateSlider();
-  });
+  window.addEventListener('resize', updateSlider);
   updateSlider();
 }
 
-/* КНОПКА UP (только для страницы Gifts) */
+/* КНОПКА UP */
 const backToTopBtn = document.getElementById('backToTop');
 if (backToTopBtn) {
   window.addEventListener('scroll', () => {
-    if (window.innerWidth <= 768 && window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
+    backToTopBtn.classList.toggle('show', window.scrollY > 300);
   });
 
   backToTopBtn.addEventListener('click', () => {
